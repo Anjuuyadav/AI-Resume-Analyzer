@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./lib/db.js";
 import authRoutes from "./routes/authRoutes.js";
+import resumeRoutes from "./routes/resumeRoutes.js";
 
 
 // Load environment variables
@@ -22,6 +23,7 @@ app.use(cookieParser());
 
 // Test Route
 app.use("/api/auth", authRoutes);
+app.use("/api/users", resumeRoutes);
 
 
 // Connect Database

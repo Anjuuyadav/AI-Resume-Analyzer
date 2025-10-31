@@ -19,7 +19,7 @@ export const protectRoute = async (req, res, next) => {
     if (!existingUser) {
       return res.status(404).json({ message: "User not found" });
     }
-
+   console.log("Cookies received:", req.cookies);
     req.user = existingUser;
     next();
   } catch (error) {

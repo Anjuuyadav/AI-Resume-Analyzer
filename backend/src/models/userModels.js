@@ -16,6 +16,14 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: 6,
     },
+    resumeUrl: {
+      type: String,
+      default: ""
+    },
+     resumeFileName: {
+      type: String, // Original file name
+      default: "",
+    },
   },
   { timestamps: true }
 );
