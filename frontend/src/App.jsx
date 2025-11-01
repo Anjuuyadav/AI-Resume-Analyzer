@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
+import Resumepage from "./pages/ResumePage";
 import LoginPage from "./pages/LoginPage";
 import { Loader } from "lucide-react";
 
@@ -43,6 +44,10 @@ const App = () => {
         <Route
           path="/login"
           element={!authUser ? <LoginPage /> : <Navigate to="/" />}
+        ></Route>
+        <Route
+          path="/resume"
+          element={authUser ? <Resumepage /> : <Navigate to="/login" />}
         ></Route>
       </Routes>
     </div>

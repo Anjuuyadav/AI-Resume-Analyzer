@@ -14,11 +14,11 @@ const SignUpPage = () => {
   const { login, isLoggingIn, authUser } = useAuthStore();
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (authUser) {
-  //     navigate("/");
-  //   }
-  // }, [authUser, navigate]);
+  useEffect(() => {
+    if (authUser) {
+      navigate("/");
+    }
+  }, [authUser, navigate]);
 
   const validateForm = () => {
     if (!formData.email.trim()) return toast.error("Email is required");
