@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Mail, User, Lock, EyeOff, Eye, Loader2 } from "lucide-react";
 
-const SignUpPage = () => {
+const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
@@ -135,4 +135,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default LoginPage;

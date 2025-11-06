@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema(
       type: String, // Original file name
       default: "",
     },
+    resumeText: {
+  type: String,
+  default: "",
+},
   },
   { timestamps: true }
 );
